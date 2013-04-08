@@ -1,0 +1,22 @@
+{
+	"Kitchen": {
+		"ImagePath": "assets/img/gal/image/",
+		"ThumbPath": "assets/img/gal/thumb/",
+		"FileNames": [ "kitchen001.jpg", "kitchen002.jpg", "kitchen003.jpg", "kitchen004.jpg", "kitchen005.jpg", "kitchen006.jpg", "kitchen007.jpg", "kitchen008.jpg", "kitchen009.jpg", "kitchen010.jpg", "kitchen011.jpg", "kitchen012.jpg", "kitchen013.jpg", "kitchen014.jpg", "kitchen015.jpg", "kitchen016.jpg", "kitchen017.jpg", "kitchen018.jpg", "kitchen019.jpg", "kitchen020.jpg", "kitchen021.jpg", "kitchen022.jpg", "kitchen023.jpg", "kitchen024.jpg", "kitchen025.jpg", "kitchen026.jpg", "kitchen027.jpg", "kitchen028.jpg", "kitchen029.jpg", "kitchen030.jpg" ]
+	},
+	"Living": {
+		"ImagePath": "assets/img/gal/image/",
+		"ThumbPath": "assets/img/gal/thumb/",
+		"FileNames": [ "living001.jpg", "living002.jpg", "living003.jpg", "living004.jpg", "living005.jpg", "living006.jpg", "living007.jpg", "living008.jpg", "living009.jpg", "living010.jpg", "living011.jpg", "living012.jpg", "living013.jpg", "living014.jpg", "living015.jpg" ]
+	},
+	"Bedroom": {
+		"ImagePath": "assets/img/gal/image/",
+		"ThumbPath": "assets/img/gal/thumb/",
+		"FileNames": [ "bedroom001.jpg", "bedroom002.jpg", "bedroom003.jpg", "bedroom004.jpg", "bedroom005.jpg", "bedroom006.jpg", "bedroom007.jpg", "bedroom008.jpg", "bedroom009.jpg", "bedroom010.jpg" ]
+	},
+	"Scrapbook": {
+		"ImagePath": "assets/img/gal/image/",
+		"ThumbPath": "assets/img/gal/thumb/",
+		"FileNames": [ "scrapbook001.jpg", "scrapbook002.jpg", "scrapbook003.jpg", "scrapbook004.jpg", "scrapbook005.jpg", "scrapbook006.jpg", "scrapbook007.jpg", "scrapbook008.jpg", "scrapbook009.jpg", "scrapbook010.jpg", "scrapbook011.jpg", "scrapbook012.jpg", "scrapbook013.jpg" ]
+	}
+}
