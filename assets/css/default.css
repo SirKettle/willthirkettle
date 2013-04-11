@@ -103,8 +103,8 @@ footer p{
 	margin-bottom:20px;
 }
 
-#iPageContent p, #iPageContent li{
-	margin-bottom:20px;
+#iPageContent h3, #iPageContent p, #iPageContent li{
+	margin:0 20px 20px 20px;
 }
 
 @media only screen and (max-width: 600px), (max-device-width: 600px) {
@@ -127,6 +127,14 @@ footer p{
 	
 	#iMainNavigation{
 		display:none;
+	}
+	
+	footer{
+		padding-left: 0;
+	}
+
+	#iPageContent h3, #iPageContent p, #iPageContent li{
+		margin:0 10px 15px 10px;
 	}
 }
 
