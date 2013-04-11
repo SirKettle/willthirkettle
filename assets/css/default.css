@@ -93,6 +93,18 @@ footer p{
 	padding-bottom:20px;
 	border-bottom:solid 1px #ddd;
 	margin-bottom:20px;
+	line-height:1.5;
+}
+
+#iPageContent h3{
+	font-family: Georgia;
+	font-size:3em;
+	color:#666;
+	margin-bottom:20px;
+}
+
+#iPageContent p, #iPageContent li{
+	margin-bottom:20px;
 }
 
 @media only screen and (max-width: 600px), (max-device-width: 600px) {
