@@ -26,7 +26,7 @@ var GoogleAnalyticsHandler = (function(){
 	};
 })();
 
-GoogleAnalyticsHandler.CODE = "";
+GoogleAnalyticsHandler.CODE = "UA-40085503-1";
 
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', GoogleAnalyticsHandler.CODE]);
