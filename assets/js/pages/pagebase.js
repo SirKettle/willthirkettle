@@ -7,7 +7,7 @@ function PageBase(sTitle)
 	var m_nPageHeight = 0;
 	
 	m_$Page.append(
-		$("<h1>").text(sTitle.toUpperCase()),
+		//$("<h1>").text(sTitle.toUpperCase()),
 		m_$Frame,
 		$("<div>").addClass("clear")
 	);

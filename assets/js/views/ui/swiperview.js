@@ -7,7 +7,7 @@ function SwiperView(cArgs)
 	}, cArgs);
 	var parent = ExtendClass(this, new ViewBase("cSwiperView"));
 	var m_$Content = $("#iPageContent");
-	var m_aRatio = [732, 450];
+	var m_aRatio = [900, 450];
 	var m_nWidth = m_aRatio[0];
 	var m_nHeight = m_aRatio[1];
 	var m_bMobile = false;

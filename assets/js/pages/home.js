@@ -8,14 +8,18 @@ function HomePage(sTitle)
 		parent.Frame.empty();
 		
 		$.getJSON("/assets/data/gallery_portfolio.json", function(cGalleries){
-			if (typeof cGalleries["Kitchen"] != "undefined")
+			if (typeof cGalleries["Portfolio"] != "undefined")
 			{
 				var cSwiperView = null;
 				var fLoadGallery = function(cGallery){
 
-					if (cSwiperView !== null)
+					if (cSwiperView === null)
 					{
-						cSwiperView.Hide();
+						//cSwiperView.Hide();
+						cSwiperView = new SwiperView({
+							ImagePath: cGallery.ImagePath,
+							ThumbPath: cGallery.ThumbPath
+						});
 					}
 
 					cSwiperView = new SwiperView({
@@ -30,7 +34,7 @@ function HomePage(sTitle)
 					});
 				};
 			
-				fLoadGallery(cGalleries["Kitchen"]);
+				fLoadGallery(cGalleries["Portfolio"]);
 			}
 			else
 			{

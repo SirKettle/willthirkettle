@@ -3,6 +3,7 @@ var PageManager = (function(){
 	
 	var m_cPages = {};
 	var m_sCurrentPageKey = null;
+	var m_cCurrentPageArgs = null;
 	var m_bInTransition = false;
 	var m_$MainNav = $("#iMainNavigation");
 	var m_$MobileNav = $("#iMobileNavigation");
@@ -32,6 +33,8 @@ var PageManager = (function(){
 				typeof cArgs.PageKey == "string" &&
 				typeof m_cPages[cArgs.PageKey] != "undefined")
 			{
+				m_cCurrentPageArgs = cArgs;
+			
 				var cCurrentPage = m_cPages[cArgs.PageKey];
 						
 				if (m_sCurrentPageKey && typeof m_cPages[m_sCurrentPageKey] != "undefined")
@@ -66,8 +69,10 @@ var PageManager = (function(){
 			{
 				var cCurrentPage = m_cPages[m_sCurrentPageKey];
 				
+				Log.Log(m_cCurrentPageArgs);
 				cCurrentPage.Hide(function(){
-					cCurrentPage.Show();
+					m_sCurrentPageKey = null;
+					PageManager.ShowPage(m_cCurrentPageArgs);
 				});
 			}
 			
@@ -145,8 +150,8 @@ var PageManager = (function(){
 		},
 		PageRendered: function(){
 			m_bInTransition = false;
-			Log.Log("- - - PageRendered: Transition = false");
-			Log.Log("================================");
+			//Log.Log("- - - PageRendered: Transition = false");
+			//Log.Log("================================");
 		}
 	};
 })();

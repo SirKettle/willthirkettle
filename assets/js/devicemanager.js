@@ -4,6 +4,7 @@ var DeviceManager = (function(){
 	var m_bMobile = false;
 	var m_cDimensions = {};
 	var m_$Body = $("body");
+	var m_nResizeTimerId = null;
 	
 	function OnResize()
 	{
@@ -14,7 +15,12 @@ var DeviceManager = (function(){
 		{
 			m_cDimensions.Width = nNewWidth;
 			m_cDimensions.Height = nNewHeight;
-			EventDispatcher.TriggerEvent("OnResize", $.extend({}, m_cDimensions));
+			clearTimeout(m_nResizeTimerId);
+			Log.Log("attempt");
+			m_nResizeTimerId = setTimeout(function(){
+			Log.Log("OnResize");
+				EventDispatcher.TriggerEvent("OnResize", $.extend({}, m_cDimensions));
+			}, 50);
 		}
 	}
 	
