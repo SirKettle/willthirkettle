@@ -9,7 +9,7 @@ function ContactPage(sTitle)
 			"<h3>Contact me...</h3>" +
 			"<ul>" +
 				"<li><a href=\"mailto:will@thekettlestudio.co.uk\">Email - will@thekettlestudio.co.uk</a></li>" +
-				"<li><a href=\"https://www.facebook.com/willthirkettle\">Facebook - http://uk.linkedin.com/in/thirkettle/</a></li>" + 
+				"<li><a href=\"https://www.facebook.com/willthirkettle\">Facebook - https://www.facebook.com/willthirkettle</a></li>" + 
 				"<li><a href=\"http://uk.linkedin.com/in/thirkettle/\">LinkedIn - http://uk.linkedin.com/in/thirkettle/</a></li>" +
 				"<li><a href=\"https://github.com/SirKettle\">GitHub - https://github.com/SirKettle</a></li>" +
 			"</ul>"

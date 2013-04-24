@@ -22,12 +22,7 @@ function HomePage(sTitle)
 						});
 					}
 
-					cSwiperView = new SwiperView({
-						ImagePath: cGallery.ImagePath,
-						ThumbPath: cGallery.ThumbPath
-					});
-
-					cSwiperView.Show(parent.Frame, cGallery.FileNames, function(){
+					cSwiperView.Show(parent.Frame, cGallery.Items, function(){
 						parent.Show(function(){
 							cSwiperView.SwipeInit();
 						});

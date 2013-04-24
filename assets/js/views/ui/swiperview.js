@@ -14,10 +14,10 @@ function SwiperView(cArgs)
 	var m_nItemCount = 0;
 	
 	// Public Methods
-	this.Show = function($Target, aItems, fOnReady){
+	this.Show = function($Target, cItems, fOnReady){
 		
 		parent.Show($Target);
-		m_nItemCount = aItems.length;
+		m_nItemCount = 0;
 		m_bMobile = m_$Content.width() < m_nWidth;
 		
 		if (m_bMobile)
@@ -28,6 +28,14 @@ function SwiperView(cArgs)
 		
 		var $Container = $("<div>").addClass("swiper-container").appendTo(parent.View).width(m_nWidth).height(m_nHeight);
 		var $Wrapper = $("<div>").addClass("swiper-wrapper").appendTo($Container);
+
+		for (var sItem in cItems)
+		{
+			(function(cItem, sItem){
+				m_nItemCount++;
+				$Wrapper.append("<div class=\"swiper-slide\" style=\"width:" + m_nWidth + "px;height:" + m_nHeight + "px;background-image:url('" + m_cSettings.ImagePath + cItem.Image + "');\"></div>");
+			})(cItems[sItem], sItem);
+		}
 		
 		if (m_bMobile)
 		{
@@ -37,14 +45,6 @@ function SwiperView(cArgs)
 			{
 				$Dots.append(" &bull; ");
 			}
-		}
-
-		for (var nIndex = 0; nIndex < m_nItemCount; ++nIndex)
-		{
-			(function(sImage){
-				
-				$Wrapper.append("<div class=\"swiper-slide\" style=\"width:" + m_nWidth + "px;height:" + m_nHeight + "px;background-image:url('" + m_cSettings.ImagePath + sImage + "');\"></div>");
-			})(aItems[nIndex]);
 		}
 		
 		fOnReady();

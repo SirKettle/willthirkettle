@@ -1,12 +1,13 @@
 {
-	"Kitchen": {
-		"ImagePath": "assets/img/gal/image/",
-		"ThumbPath": "assets/img/gal/thumb/",
-		"FileNames": [ "kitchen001.jpg", "kitchen002.jpg", "kitchen003.jpg", "kitchen004.jpg", "kitchen005.jpg", "kitchen006.jpg", "kitchen007.jpg", "kitchen008.jpg", "kitchen009.jpg", "kitchen010.jpg", "kitchen011.jpg", "kitchen012.jpg", "kitchen013.jpg", "kitchen014.jpg", "kitchen015.jpg", "kitchen016.jpg", "kitchen017.jpg", "kitchen018.jpg", "kitchen019.jpg", "kitchen020.jpg", "kitchen021.jpg", "kitchen022.jpg", "kitchen023.jpg", "kitchen024.jpg", "kitchen025.jpg", "kitchen026.jpg", "kitchen027.jpg", "kitchen028.jpg", "kitchen029.jpg", "kitchen030.jpg" ]
-	},
 	"Portfolio": {
 		"ImagePath": "assets/img/gal/image/",
 		"ThumbPath": "assets/img/gal/thumb/",
-		"FileNames": [ "lyroke001.jpg", "tks001.jpg", "leap001.jpg", "iamplayr001.jpg", "evolve001.jpg" ]
+		"Items": {
+			"Evolve Associates Ltd": { "Image": "evolve001.jpg", "Url": "http://evolveassociates.com" },
+			"Lyroke": { "Image": "lyroke001.jpg", "Url": "https://lyroke.com" },
+			"LEAP": { "Image": "leap001.jpg", "Url": "http://norwichleap.co.uk" },
+			"I AM PLAYR": { "Image": "iamplayr001.jpg", "Url": "http://iamplayr.com" },
+			"The Kettle Studio": { "Image": "tks001.jpg", "Url": "http://thekettlestudio.co.uk" }
+		}
 	}
 }
