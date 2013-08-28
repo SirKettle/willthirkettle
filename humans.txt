@@ -1,0 +1,31 @@
+
+
+/* TEAM */
+
+                            
+Will Thirkettle - Web design and development
+*  Site: http://willthirkettle.co.uk
+*  Twitter: @thirkettle
+*  Location: London, UK.
+
+
+--------------------------------------------------------------------
+
+
+/* THANKS */
+
+
+Vladimir Kharlampidi for the cool swiper plugin - http://www.idangero.us/sliders/swiper/
+
+
+--------------------------------------------------------------------
+
+
+/* SITE */
+
+
+Language: English
+
+Tech: JavaScript, lodash, jQuery, HTML5, CSS(3), Git...
+
+Software: Sublime Text 3, SourceTree, Gimp, Google Chrome Dev Tools, Google Drive
