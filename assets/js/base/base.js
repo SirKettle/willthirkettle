@@ -153,3 +153,35 @@ function String_GetTimeBySeconds(nSeconds, cArgs)
 
 	return bPositive ? sTime : "-" + sTime;
 }
+
+var appendSuffix = function (nPos) {
+  var sSuffix = "";
+  switch (nPos % 10){
+    case 1:
+    sSuffix = (nPos % 100 === 11) ? "th" : "st";
+    break;
+  case 2:
+    sSuffix = (nPos % 100 === 12) ? "th" : "nd";
+    break;
+  case 3:
+    sSuffix = (nPos % 100 === 13) ? "th" : "rd";
+    break;
+  default:
+    sSuffix = "th";
+    break;
+  }
+  return nPos + sSuffix;
+},
+
+getDateHtml = function (oDate) {
+  var aMonths = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  
+  return '<em>' +
+    // day of month
+    appendSuffix(oDate.getDate()) +
+    // month
+    ' ' + aMonths[oDate.getMonth()] +
+    // year
+    ' ' + oDate.getFullYear() +
+    '</em>';
+};

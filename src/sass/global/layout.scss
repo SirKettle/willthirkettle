@@ -1,0 +1,115 @@
+/* * * * * * * * * * * * * * layout * * * * * * * * * * * * * */
+
+
+/* fullsize */
+
+@media only screen and (min-width: $widthCutOff) {
+
+  .cBody {
+    max-width: 1040px;
+    min-width: $widthCutOff;
+    width: 90%;
+    margin: $navHeight auto 0;
+
+    > nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $navHeight;
+      z-index: 99998;
+
+      > div {
+        position: static;
+        max-width: 1040px;
+        min-width: $widthCutOff;
+        width: 90%;
+        height: $navHeight;
+        margin: 0 auto;
+      }
+    }
+
+    .cPage {
+
+      > header {
+        padding: ($gutterWidth * 1.5) $gutterWidth;
+      }
+
+      > footer {
+        padding: $gutterWidth;
+      }
+
+      > .cContent {
+        padding: $gutterWidth;
+        min-height: 200px;
+
+        h2, h3, h4, h5, p, li, blockquote, section {
+          margin-bottom: $gutterWidth;
+        }
+      }
+    }
+  }
+}
+
+/* mobile */
+
+@media only screen and (max-width: $widthCutOff) {
+
+  body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    .cBody {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      width: 200%;
+      transition:all 0.3s ease;
+
+      > nav {
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 100%;
+      }
+
+      .cPage{
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 100%;
+        overflow-x: hidden;
+        // this adds momentum back to the ios scrolling (by default only the
+        // body has this I think!?)
+        overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
+
+        > header {
+          padding: ($gutterWidth * 0.75) ($gutterWidth * 0.5);
+        }
+
+        > footer {
+          padding: $gutterWidth / 2;
+        }
+
+        > .cContent {
+          padding: $gutterWidth / 2;
+          min-height: 200px;
+
+          h2, h3, h4, h5, p, li, blockquote, section {
+            margin-bottom: $gutterWidth / 2;
+          }
+        }
+      }
+    }
+
+    &.openNav .cBody {
+      left:0;
+    }
+  }
+}

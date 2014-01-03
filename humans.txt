@@ -12,20 +12,14 @@ Will Thirkettle - Web design and development
 --------------------------------------------------------------------
 
 
-/* THANKS */
-
-
-Vladimir Kharlampidi for the cool swiper plugin - http://www.idangero.us/sliders/swiper/
-
-
---------------------------------------------------------------------
-
-
 /* SITE */
 
+Live version 2.3
 
 Language: English
 
-Tech: JavaScript, lodash, jQuery, HTML5, CSS(3), Git...
+Last update: 2013/11/26
+
+Tech: JavaScript, lodash, jQuery, HTML5, CSS(3), Sass, Grunt, Git...
 
 Software: Sublime Text 3, SourceTree, Gimp, Google Chrome Dev Tools, Google Drive

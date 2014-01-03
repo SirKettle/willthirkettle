@@ -1,0 +1,24 @@
+
+li.project {
+  @include appendHR();
+
+  .img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media only screen and (max-width: $widthCutOff) {
+      border: solid 1px $dividerAltColor;
+      height: 150px;
+      margin: 0 0 ($gutterWidth * 0.5);
+    }
+    
+    @media only screen and (min-width: $widthCutOff) {
+      width : 400px;
+      height: 200px;
+      float: right;
+      margin: 0 0 80px $gutterWidth;
+      -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(white(0.3)));
+    }
+  }
+}

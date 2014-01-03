@@ -1,0 +1,189 @@
+/* * * * * * * * * * * * * * defaults * * * * * * * * * * * * * */
+
+body {
+  background: $background;
+  font-size: $fontSize;
+  font-family: $fontMain;
+  line-height: $lineHeight;
+
+  > * {
+    opacity: 1;
+    transition: all 0.5 ease;
+  }
+
+  &.cNotReady > *{
+    opacity: 0;
+  }
+}
+
+body,
+select,
+input,
+textarea {
+  color: $colorMain;
+}
+
+a {
+  color: $linkColor;
+}
+a:hover {
+  color: $linkHoverColor;
+}
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection {
+  background: $highlightBgColor;
+  color: $highlightColor;
+  text-shadow: none;
+}
+::selection {
+  background: $highlightBgColor;
+  color: $highlightColor;
+  text-shadow: none;
+}
+/*  j.mp/webkit-tap-highlight-color */
+a:link {
+  -webkit-tap-highlight-color: $highlightBgColor;
+}
+ins {
+  background-color: $highlightBgColor;
+  color: #000;
+  text-decoration: none;
+}
+mark {
+  background-color: $highlightBgColor;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder {
+  color: #a9a9a9;
+}
+textarea:-moz-placeholder {
+  color: #a9a9a9;
+}
+
+em {
+  font-style: italic;
+}
+
+small {
+  font-size: $fontSize * 0.8;
+}
+
+header,
+h1,
+h2,
+h3,
+h4 {
+  @include headerText();
+}
+
+hr {
+  background: $dividerColor;
+  border-bottom: solid 1px lighten($bgColor, 30%);
+  margin:$gutterWidth 0;
+}
+
+.clear {
+  clear: both;
+}
+
+button {
+  padding: ($paddingWidth * 0.5) $paddingWidth;
+  background: $linkColor;
+  border: none;
+  color: #fff;
+  text-align: center;
+  @include border-radius(3px);
+}
+
+button:hover, button:active {
+  background: $linkHoverColor;
+}
+
+img.image {
+  border: solid 1px #fff;
+  width: 100%;
+  margin: 0 0 10px;
+}
+
+.tags {
+  li {
+    @media only screen and (max-width: $widthCutOff) {
+      @include pillItem($paddingWidth * 0.5);
+      font-size: $fontSize * 0.75;
+    }
+    
+    @media only screen and (min-width: $widthCutOff) {
+      @include pillItem();
+    }
+  }
+}
+
+/* * * * * * * * * * * * * * theme * * * * * * * * * * * * * */
+
+.cBody {
+
+  .cPage {
+    background: $bgColor;
+    color: $colorMain;
+
+    > footer {
+      border-top: solid 1px rgba(255, 255, 255, 0.3);
+      background: mix($bgColor, $background);
+    }
+
+    > .cContent {
+      border-top: solid 1px rgba(255, 255, 255, 0.3);
+      border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+
+      h1 {
+        font-size: $fontSize * 2.5;
+      }
+
+      h2 {
+        font-size: $fontSize * 2;
+      }
+
+      h3 {
+        font-size: $fontSize * 1.5;
+      }
+
+      h4 {
+        font-size: $fontSize * 1.3;
+      }
+
+      section {
+        padding: $paddingWidth * 2;
+        background: mix($linkHoverColor, #fff, 50%);
+        color: darken($colorMain, 20%);
+
+        * {
+          text-shadow: none;
+        }
+
+        h1 {
+          font-size: $fontSize * 2;
+        }
+
+        h2 {
+          font-size: $fontSize * 1.5;
+        }
+
+        h3 {
+          font-size: $fontSize * 1.3;
+        }
+
+        @include border-radius($paddingWidth);
+
+        a {
+          color: darken($navBgColor, 6.5%);
+        }
+        a:hover {
+          color: $navBgColor;
+        }
+      }
+    }
+  }
+}

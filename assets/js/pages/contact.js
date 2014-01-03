@@ -2,26 +2,57 @@ function ContactPage(sTitle)
 {
 	var parent = ExtendClass(this, new PageBase(sTitle));
 	var m_sRegId = null;
+	var m_$Frame = parent.GetFrame();
 	
 	this.Show = function(){
-		
-		parent.Frame.empty().append(
-			"<h3>Contact me...</h3>" +
-			"<ul>" +
-				"<li><a href=\"mailto:will@thekettlestudio.co.uk\">Email - will@thekettlestudio.co.uk</a></li>" +
-				"<li><a href=\"https://www.facebook.com/willthirkettle\">Facebook - https://www.facebook.com/willthirkettle</a></li>" + 
-				"<li><a href=\"http://uk.linkedin.com/in/thirkettle/\">LinkedIn - http://uk.linkedin.com/in/thirkettle/</a></li>" +
-				"<li><a href=\"https://github.com/SirKettle\">GitHub - https://github.com/SirKettle</a></li>" +
-			"</ul>"
-		);
+
+		$.get('/assets/html/contact_page.html', function(sContactHtml) {
+		  
+		  // var sHtml = '<p>If you have any questions, please give us a call</p>';
+
+			// // if ($(window).width() > 600) {
+			// 	sHtml += '<div id="map-canvas" class="mapWrapper"></div>'
+			// // }
+
+			// sHtml += '</div>';
+
+			m_$Frame.html(sContactHtml);
+
+			parent.Show();
+
+	  //   // Enable the visual refresh
+			// // google.maps.visualRefresh = true;
+
+			// var theWorkshop = new google.maps.LatLng(52.537193, 1.355964);
+
+	  //   var map = new google.maps.Map(document.getElementById("map-canvas"), {
+	  //     center: theWorkshop,
+	  //     // cid: 5779555002704752917,
+	  //     zoom: 12,
+	  //     mapTypeId: google.maps.MapTypeId.ROADMAP
+	  //   });
+
+	  //   var infowindow = new google.maps.InfoWindow({
+			//     content: '<div class="mapsInfo"><h3>THE FITTED FURNITURE CO.</h3><p>Wood Farm Barn, High Green, Brooke, NR15 1JE</p></div>'
+			// });
+
+			// var marker = new google.maps.Marker({
+			//     position: theWorkshop,
+			//     map: map,
+			//     title:"Workshop"
+			// });
+
+			// google.maps.event.addListener(marker, 'click', function() {
+			//   infowindow.open(map,marker);
+			// });
+		});
 			
-		parent.Show();
 	};
 	
 	this.Hide = function(fOnHide){
 //		EventDispatcher.UnbindEvents(m_sRegId);
 		parent.Hide(fOnHide);
-		parent.Frame.empty();
+		m_$Frame.empty();
 	};
 }
 

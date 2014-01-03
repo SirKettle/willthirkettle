@@ -1,0 +1,119 @@
+/* * * * * * * * * * * * * * nav * * * * * * * * * * * * * */
+
+/* mobile */
+
+@media only screen and (max-width: $widthCutOff) {
+
+  .cBody > nav {
+    background: $navBgColorMobile;
+    color:$navColorMobile * 0.8;
+
+    button {
+      position: absolute;
+      top: $gutterWidth * 0.5;
+      right: $gutterWidth * 0.5;
+      color: $linkColor;
+      background: $bgColor;
+    }
+
+    button:hover, button:active {
+      color: $linkHoverColor;
+      background: white;
+    }
+
+    ul {
+      li {
+        margin-top: $gutterWidth;
+
+        > a {
+          text-decoration: none;
+        }
+
+        > * {
+          @include headerText(1px 1px 0 black(0.3));
+          display: block;
+          padding: 0 $gutterWidth;
+          height: $gutterWidth * 2;
+          line-height: $gutterWidth * 2.2;
+          font-size: $fontSize * 1.5;
+          white-space: nowrap;
+          color: $navColorMobile;
+          opacity: 0.8;
+        }
+      }
+
+      li.on {
+        > * {
+          opacity: 1;
+        }
+      }
+
+      li:hover {
+        > * {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
+
+
+/* fullsize */
+
+@media only screen and (min-width: $widthCutOff) {
+
+  .cBody > nav {
+    background: $navBgColor;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.15);
+    // box-shadow: 0 3px 25px white(0.5);
+
+    button {
+      display:none;
+    }
+
+    ul {
+      float:right;
+      padding:0; margin:0;
+
+      li {
+        @include headerText(1px 1px 0 black(0.3));
+        float:left;
+        position:relative;
+        list-style:none;
+        padding:0; margin:0;
+        font-size:$navHeight * 0.35;
+        cursor:pointer;
+
+        > a {
+          text-decoration: none;
+        }
+
+        > * {
+          color:$navColor;
+          display:block;
+          padding:0 13px;
+          height:$navHeight;
+          line-height:$navHeight;
+          white-space: nowrap;
+        }
+
+        &.on {
+          background:$navBgColor * 1.1;
+
+           > * {
+            color:$navOnColor;
+          }
+        }
+
+        &:hover {
+          background:$navBgColor * 1.2;
+
+           > * {
+            color:$navHoverColor;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,59 +1,80 @@
-function HomePage(sTitle)
+function HomePage (sTitle)
 {
-	var parent = ExtendClass(this, new PageBase(sTitle));
-	var m_sRegId = null;
+	var parent = ExtendClass(this, new PageBase(sTitle)),
+	    m_sRegId = null,
+	    m_$Frame = parent.GetFrame();
 	
-	this.Show = function(){
-		
-		parent.Frame.empty();
-		
-		$.getJSON("/assets/data/gallery_portfolio.json", function(cGalleries){
-			if (typeof cGalleries["Portfolio"] != "undefined")
-			{
-				var cSwiperView = null;
-				var fLoadGallery = function(cGallery){
-
-					if (cSwiperView === null)
-					{
-						//cSwiperView.Hide();
-						cSwiperView = new SwiperView({
-							ImagePath: cGallery.ImagePath,
-							ThumbPath: cGallery.ThumbPath
-						});
-					}
-
-					cSwiperView.Show(parent.Frame, cGallery.Items, function(){
-						parent.Show(function(){
-							cSwiperView.SwipeInit();
-						});
-					});
-				};
+	this.Show = function() {
+		$.get('/assets/html/home.html', function(sHtml) {
+			m_$Frame.html(sHtml);
 			
-				fLoadGallery(cGalleries["Portfolio"]);
-			}
-			else
-			{
-				parent.Frame.append(
-					"<p>Ooops - Gallery data was not found...</p>",
-					$("<a>").attr("href", "").text("Take me to the homepage").click(function(e){
-						e.preventDefault();
-						PageManager.ShowPage({PageKey: "Home"});
-						return false;
-					})
-				);
-				
-				parent.Show();
-			}
+			$.getJSON('/src/json/portfolio.json' + g_CacheBusting, function (aPortfolio) {
+				if (_.isObject(aPortfolio)) {
+					var $list = $('<ul>');
+
+					_.each(aPortfolio, function (aProject, aKey) {
+						if (_.isString(aProject.website)) {
+
+							var $item = $('<li>').addClass('project'),
+									$tags = $('<ul>').addClass('tags');
+
+							_.each(aProject.tags, function (aTag) {
+								$tags.append($('<li>').text(aTag));
+							});
+
+							// if (!DeviceManager.IsMobile()) {
+							// 	$item.append(
+							// 		$('<div>').addClass('webpage').append(
+							// 			$('<iframe>').attr({
+							// 				src      : aProject.website,
+							// 				seamless : "seamless"
+							// 			})
+							// 		)
+							// 	);
+							// }
+
+							$item.append(
+								$('<div>').addClass('img').css('backgroundImage', 'url("/assets/img/projects/' + aKey + '.jpg")'),
+								$('<h3>').append(
+									$('<a>').attr('href', aProject.website).text(aProject.title)
+								),
+								$('<h4>').text(aProject.summary),
+								$('<p>').text(aProject.description)
+							);
+
+							if (_.isObject(aProject.testimonial)) {
+								$item.append(
+									$('<blockquote>').append(
+										aProject.testimonial.html,
+										aProject.testimonial.author
+									)
+								);
+							}
+
+							$item.append($tags).appendTo($list);
+						}
+					});
+
+					m_$Frame.append(
+						$('<hr>'),
+						$('<h2>').text('Recent projects...'),
+						$list
+					);
+
+					parent.Show();
+				}
+				else
+				{
+					parent.Show();
+				}
+
+			});
 		});
-		
-		
 	};
 	
-	this.Hide = function(fOnHide){
-//		EventDispatcher.UnbindEvents(m_sRegId);
+	this.Hide = function (fOnHide) {
 		parent.Hide(fOnHide);
-		parent.Frame.empty();
+		m_$Frame.empty();
 	};
 }
-
 

@@ -1,0 +1,84 @@
+
+// used for the mixins
+$default-prefixes: webkit moz ms o;
+
+
+// background
+// $background   : #fafafa;
+$background   : #ddd;
+
+
+// colours
+$colorMain       : #666; //#444;
+$bgColor         : #eee;
+$linkColor       : #ea1; //##00afff;
+$linkHoverColor  : #fc0; //#09f;
+$dividerColor    : darken($bgColor, 15%);
+$dividerAltColor : #fff;
+
+$sectionColor   : lighten($colorMain, 20%);
+$sectionBgColor : lighten($bgColor, 20%);
+
+// header 
+$headerColor   : #fcd700;
+$headerBg      : #555 url(https://pbs.twimg.com/profile_banners/18982113/1366721496/web);
+
+// nav
+$navColor      : rgba(255,255,255,0.8);
+$navOnColor    : rgba(255,255,255,0.9);
+$navHoverColor : rgba(255,255,255,1);
+// $navColor      : rgba(0,0,0,0.8);
+// $navOnColor    : rgba(0,0,0,0.9);
+// $navHoverColor : rgba(0,0,0,1);
+$navBgColor    : #6495ED;
+$navHeight     : 50px;
+
+// mobile nav
+$navColorMobile   : #fff; // This should be set to brightest - used for .on/hover
+$navBgColorMobile : $navBgColor;
+
+// text-selection colors / touch select etc...
+$highlightColor   : #fff;
+$highlightBgColor : #fcd700;
+
+
+
+
+// dimensions
+$width        : 1040px;
+$widthCutOff  : 600px; // this needs to match the php config file
+
+
+// gutters / margins
+$gutterWidth : 20px;
+$paddingWidth : 10px;
+
+
+// fonts
+$lineHeight   : 1.5;
+$fontSize     : 13px;
+$fontMain     : Helvetica Neue, Helmet, Helvetica, Sans-serif, Arial;
+$fontCode     : Monaco, Consolas, Monospace;
+$fontHeadings : Consolas, Georgia, Sans-serif;
+$fontQuotes   : Cambria, Georgia, Sans-serif;
+
+
+// *********************** covert/subdued styles *********************
+
+// // background
+// $background   : #ddd;
+// // colours
+// $colorMain    : #aaa;
+// // $bgColor      : #eee;
+// // $linkColor    : #d90;
+// // text-selection colors / touch select etc...
+// // $highlightColor   : #fff;
+// // $highlightBgColor : #fcd700;
+// // header 
+// $headerColor   : rgba(255,255,255,1);
+// $headerBgColor : rgba(0,0,0,0.1);
+// // nav
+// // $navColor      : #999;
+// // $navOnColor    : $navColor * 0.8;
+// // $navHoverColor : #00afff;
+// // $navBgColor    : #f4f4f4;

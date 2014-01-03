@@ -77,4 +77,4 @@ var EventDispatcher = (function(){
 			return EventDispatcher;
 		}
 	};
-})();
+}());

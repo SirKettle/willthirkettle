@@ -6,16 +6,10 @@ function ViewBase(sClass)
 	{
 		m_$View.addClass(sClass);
 	}
-	
-	Object.defineProperty(
-		this, 
-		"View", 
-		{
-			get : function(){ return m_$View; },  
-			enumerable : true,  
-			configurable : false
-		}
-	);
+
+	this.GetView = function () {
+		return m_$View;
+	};
 	
 	this.Show = function($Target, bPrepend){
 		

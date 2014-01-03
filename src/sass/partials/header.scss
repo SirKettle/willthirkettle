@@ -1,0 +1,70 @@
+/* * * * * * * * * * * * * * header * * * * * * * * * * * * * */
+
+.cBody {
+
+  .cPage {
+
+    > header {
+      color: $headerColor;
+      background: $headerBg;
+      background-size: cover;
+
+
+      padding: $paddingWidth $gutterWidth;
+
+      h1 {
+        @include hide-text();
+        background-image: url('/assets/img/logowithstrap_white.png');
+        background-repeat: no-repeat;
+        height: 150px;
+        background-size: contain;
+        background-position: left;
+        float:left;
+        min-width: 320px;
+        width: 50%;
+      }
+
+      h2 {
+        clear:both;
+        text-indent: -9999px;
+        height: 0;
+      }
+
+      > button {
+        position: absolute;
+        top: $gutterWidth * 0.5;
+        left: $gutterWidth * 0.5;
+
+        @media only screen and (min-width: $widthCutOff) {
+            display: none;
+        }
+      }
+
+      .socialLinks {
+
+        @media only screen and (max-width: $widthCutOff) {
+
+          position: absolute;
+          top: 35px;
+          right: $gutterWidth * 0.5;
+
+          li {
+            @include socialLinks(32px, ($gutterWidth * 0.5), none);
+          }
+        }
+
+        @media only screen and (min-width: $widthCutOff) {
+
+          max-width: 40%;
+          margin-top: $gutterWidth;
+          float: right;
+
+          li {
+            @include socialLinks(64px, $gutterWidth, right);
+
+          }
+        }
+      }
+    }
+  }
+}

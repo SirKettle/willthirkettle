@@ -1,0 +1,105 @@
+
+@function black($opacity) {
+  @return rgba(0,0,0,$opacity);
+}
+
+@function white($opacity) {
+  @return rgba(255,255,255,$opacity);
+}
+
+
+
+@mixin build-prefix-values($property, $value, $prefixes: $default-prefixes) {
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: #{$value};
+  }
+  #{$property}: #{$value};
+}
+
+@mixin transition($property: all, $delay: 1s, $timing: linear) {
+  $value: $property $delay $timing;
+  // use default prefixes
+  @include build-prefix-values('transition', $value);
+}
+
+@mixin border-radius($value) {
+  @include build-prefix-values('border-radius', $value);
+}
+
+@mixin scale($scale) {
+  $value: scale($scale);
+  @include build-prefix-values('transform', $value);
+  @include build-prefix-values('transform-origin', 0 0);
+}
+
+@mixin transform($scale, $rotate: 0, $skew: 0, $origin: 0 0) {
+  $value: scale($scale) rotate($rotate) skew($skew);
+  @include build-prefix-values('transform', $value);
+  @include build-prefix-values('transform-origin', $origin);
+}
+
+@mixin hide-text{
+  overflow:hidden;
+  text-indent:-9000px;
+  display:block;
+}
+
+// mixins reliant on vars
+@mixin headerText($textShadow: 1px 1px 0 #fff) {
+  font-family: $fontHeadings;
+  text-rendering: optimizelegibility;
+  text-shadow: $textShadow;
+}
+
+@mixin appendHR() {
+  padding-bottom: $gutterWidth;
+  margin-bottom: $gutterWidth;
+  border-bottom: solid 1px $dividerColor;
+}
+
+@mixin pillItem($padding: $paddingWidth) {
+  display: inline-block;
+  margin-right: $padding;
+  color: $sectionColor;
+  background: $sectionBgColor;
+  padding: ($padding * 0.5) $padding;
+}
+
+@mixin socialLinks($iconSize, $marginLeft, $float: left) {
+  float: $float;
+  width: $iconSize;
+  height: $iconSize;
+  margin-left: $marginLeft;
+  opacity: 0.8;
+
+  span {
+    display: none;
+  }
+
+  div {
+    width: $iconSize;
+    height: $iconSize;
+    background: url('/assets/img/socialicons.png') no-repeat 0 0;
+    background-size: $iconSize ($iconSize * 7);
+  }
+
+  &.facebook div {
+    background-position: 0 0;
+  }
+
+  &.linkedIn div {
+    background-position: 0 (-$iconSize);
+  }
+
+  &.twitter div {
+    background-position: 0 (-($iconSize * 2));
+  }
+
+  &.googlePlus div {
+    background-position: 0 (-($iconSize * 3));
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}

@@ -1,12 +1,8 @@
 
 $(document).ready(function(){
-	
-	var $Date = $("#iCurrentYear");
-	var oDate = new Date();
-	
-	$Date.html(oDate.getFullYear());
-	
-	PageManager.Init();	
-	DeviceManager.Init();
+  // Log.Enable();
+	$("#year").text((new Date()).getFullYear());
+  ClientStorage.Init('CS_', true);
+  DeviceManager.Init();
+	PageManager.Init();
 });
-

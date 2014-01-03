@@ -1,0 +1,824 @@
+/*
+  HTML5 Reset :: style.css
+  ----------------------------------------------------------
+  We have learned much from/been inspired by/taken code where offered from:
+  
+  Eric Meyer          :: http://meyerweb.com
+  HTML5 Doctor        :: http://html5doctor.com
+  and the HTML5 Boilerplate :: http://html5boilerplate.com
+  
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+article, aside, figure, footer, header, nav, section, details, summary {
+  display: block; }
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img,
+object,
+embed {
+  max-width: 100%; }
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll; }
+
+/* we use a lot of ULs that aren't bulleted. 
+  don't forget to restore the bullets within content. */
+ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  font-weight: bold;
+  vertical-align: bottom; }
+
+td {
+  font-weight: normal;
+  vertical-align: top; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */ }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom; }
+
+select, input, textarea {
+  font: 99% sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+small {
+  font-size: 85%; }
+
+strong {
+  font-weight: bold; }
+
+td, td img {
+  vertical-align: top; }
+
+/* Make sure sup and sub don't screw with your line-heights
+  gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0; }
+
+/* make buttons play nice in IE */
+button {
+  width: auto;
+  overflow: visible; }
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+/* Apply a natural box layout model to all elements: http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.chromeframe {
+  position: absolute;
+  top: 0; }
+
+/* * * * * * * * * * * * * * defaults * * * * * * * * * * * * * */
+body {
+  background: #dddddd;
+  font-size: 13px;
+  font-family: Helvetica Neue, Helmet, Helvetica, Sans-serif, Arial;
+  line-height: 1.5; }
+  body > * {
+    opacity: 1;
+    transition: all 0.5 ease; }
+  body.cNotReady > * {
+    opacity: 0; }
+
+body,
+select,
+input,
+textarea {
+  color: #666666; }
+
+a {
+  color: #eeaa11; }
+
+a:hover {
+  color: #ffcc00; }
+
+/* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
+::-moz-selection {
+  background: #fcd700;
+  color: white;
+  text-shadow: none; }
+
+::selection {
+  background: #fcd700;
+  color: white;
+  text-shadow: none; }
+
+/*  j.mp/webkit-tap-highlight-color */
+a:link {
+  -webkit-tap-highlight-color: #fcd700; }
+
+ins {
+  background-color: #fcd700;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #fcd700;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+/* Mozilla dosen't style place holders by default */
+input:-moz-placeholder {
+  color: #a9a9a9; }
+
+textarea:-moz-placeholder {
+  color: #a9a9a9; }
+
+em {
+  font-style: italic; }
+
+small {
+  font-size: 10.4px; }
+
+header,
+h1,
+h2,
+h3,
+h4 {
+  font-family: Consolas, Georgia, Sans-serif;
+  text-rendering: optimizelegibility;
+  text-shadow: 1px 1px 0 white; }
+
+hr {
+  background: #c8c8c8;
+  border-bottom: solid 1px white;
+  margin: 20px 0; }
+
+.clear {
+  clear: both; }
+
+button {
+  padding: 5px 10px;
+  background: #eeaa11;
+  border: none;
+  color: #fff;
+  text-align: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
+
+button:hover, button:active {
+  background: #ffcc00; }
+
+img.image {
+  border: solid 1px #fff;
+  width: 100%;
+  margin: 0 0 10px; }
+
+@media only screen and (max-width: 600px) {
+  .tags li {
+    display: inline-block;
+    margin-right: 5px;
+    color: #999999;
+    background: white;
+    padding: 2.5px 5px;
+    font-size: 9.75px; } }
+@media only screen and (min-width: 600px) {
+  .tags li {
+    display: inline-block;
+    margin-right: 10px;
+    color: #999999;
+    background: white;
+    padding: 5px 10px; } }
+
+/* * * * * * * * * * * * * * theme * * * * * * * * * * * * * */
+.cBody .cPage {
+  background: #eeeeee;
+  color: #666666; }
+  .cBody .cPage > footer {
+    border-top: solid 1px rgba(255, 255, 255, 0.3);
+    background: #e5e5e5; }
+  .cBody .cPage > .cContent {
+    border-top: solid 1px rgba(255, 255, 255, 0.3);
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1); }
+    .cBody .cPage > .cContent h1 {
+      font-size: 32.5px; }
+    .cBody .cPage > .cContent h2 {
+      font-size: 26px; }
+    .cBody .cPage > .cContent h3 {
+      font-size: 19.5px; }
+    .cBody .cPage > .cContent h4 {
+      font-size: 16.9px; }
+    .cBody .cPage > .cContent section {
+      padding: 20px;
+      background: #ffe57f;
+      color: #333333;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      border-radius: 10px; }
+      .cBody .cPage > .cContent section * {
+        text-shadow: none; }
+      .cBody .cPage > .cContent section h1 {
+        font-size: 26px; }
+      .cBody .cPage > .cContent section h2 {
+        font-size: 19.5px; }
+      .cBody .cPage > .cContent section h3 {
+        font-size: 16.9px; }
+      .cBody .cPage > .cContent section a {
+        color: #4681ea; }
+      .cBody .cPage > .cContent section a:hover {
+        color: cornflowerblue; }
+
+/* * * * * * * * * * * * * * layout * * * * * * * * * * * * * */
+/* fullsize */
+@media only screen and (min-width: 600px) {
+  .cBody {
+    max-width: 1040px;
+    min-width: 600px;
+    width: 90%;
+    margin: 50px auto 0; }
+    .cBody > nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      z-index: 99998; }
+      .cBody > nav > div {
+        position: static;
+        max-width: 1040px;
+        min-width: 600px;
+        width: 90%;
+        height: 50px;
+        margin: 0 auto; }
+    .cBody .cPage > header {
+      padding: 30px 20px; }
+    .cBody .cPage > footer {
+      padding: 20px; }
+    .cBody .cPage > .cContent {
+      padding: 20px;
+      min-height: 200px; }
+      .cBody .cPage > .cContent h2, .cBody .cPage > .cContent h3, .cBody .cPage > .cContent h4, .cBody .cPage > .cContent h5, .cBody .cPage > .cContent p, .cBody .cPage > .cContent li, .cBody .cPage > .cContent blockquote, .cBody .cPage > .cContent section {
+        margin-bottom: 20px; } }
+/* mobile */
+@media only screen and (max-width: 600px) {
+  body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden; }
+    body .cBody {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -100%;
+      width: 200%;
+      transition: all 0.3s ease; }
+      body .cBody > nav {
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 100%; }
+      body .cBody .cPage {
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch; }
+        body .cBody .cPage > header {
+          padding: 15px 10px; }
+        body .cBody .cPage > footer {
+          padding: 10px; }
+        body .cBody .cPage > .cContent {
+          padding: 10px;
+          min-height: 200px; }
+          body .cBody .cPage > .cContent h2, body .cBody .cPage > .cContent h3, body .cBody .cPage > .cContent h4, body .cBody .cPage > .cContent h5, body .cBody .cPage > .cContent p, body .cBody .cPage > .cContent li, body .cBody .cPage > .cContent blockquote, body .cBody .cPage > .cContent section {
+            margin-bottom: 10px; }
+    body.openNav .cBody {
+      left: 0; } }
+/* * * * * * * * * * * * * * header * * * * * * * * * * * * * */
+.cBody .cPage > header {
+  color: #fcd700;
+  background: #555555 url(https://pbs.twimg.com/profile_banners/18982113/1366721496/web);
+  background-size: cover;
+  padding: 10px 20px; }
+  .cBody .cPage > header h1 {
+    overflow: hidden;
+    text-indent: -9000px;
+    display: block;
+    background-image: url("/assets/img/logowithstrap_white.png");
+    background-repeat: no-repeat;
+    height: 150px;
+    background-size: contain;
+    background-position: left;
+    float: left;
+    min-width: 320px;
+    width: 50%; }
+  .cBody .cPage > header h2 {
+    clear: both;
+    text-indent: -9999px;
+    height: 0; }
+  .cBody .cPage > header > button {
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+    @media only screen and (min-width: 600px) {
+      .cBody .cPage > header > button {
+        display: none; } }
+  @media only screen and (max-width: 600px) {
+    .cBody .cPage > header .socialLinks {
+      position: absolute;
+      top: 35px;
+      right: 10px; }
+      .cBody .cPage > header .socialLinks li {
+        float: none;
+        width: 32px;
+        height: 32px;
+        margin-left: 10px;
+        opacity: 0.8; }
+        .cBody .cPage > header .socialLinks li span {
+          display: none; }
+        .cBody .cPage > header .socialLinks li div {
+          width: 32px;
+          height: 32px;
+          background: url("/assets/img/socialicons.png") no-repeat 0 0;
+          background-size: 32px 224px; }
+        .cBody .cPage > header .socialLinks li.facebook div {
+          background-position: 0 0; }
+        .cBody .cPage > header .socialLinks li.linkedIn div {
+          background-position: 0 -32px; }
+        .cBody .cPage > header .socialLinks li.twitter div {
+          background-position: 0 -64px; }
+        .cBody .cPage > header .socialLinks li.googlePlus div {
+          background-position: 0 -96px; }
+        .cBody .cPage > header .socialLinks li:hover {
+          opacity: 1; } }
+  @media only screen and (min-width: 600px) {
+    .cBody .cPage > header .socialLinks {
+      max-width: 40%;
+      margin-top: 20px;
+      float: right; }
+      .cBody .cPage > header .socialLinks li {
+        float: right;
+        width: 64px;
+        height: 64px;
+        margin-left: 20px;
+        opacity: 0.8; }
+        .cBody .cPage > header .socialLinks li span {
+          display: none; }
+        .cBody .cPage > header .socialLinks li div {
+          width: 64px;
+          height: 64px;
+          background: url("/assets/img/socialicons.png") no-repeat 0 0;
+          background-size: 64px 448px; }
+        .cBody .cPage > header .socialLinks li.facebook div {
+          background-position: 0 0; }
+        .cBody .cPage > header .socialLinks li.linkedIn div {
+          background-position: 0 -64px; }
+        .cBody .cPage > header .socialLinks li.twitter div {
+          background-position: 0 -128px; }
+        .cBody .cPage > header .socialLinks li.googlePlus div {
+          background-position: 0 -192px; }
+        .cBody .cPage > header .socialLinks li:hover {
+          opacity: 1; } }
+
+/* * * * * * * * * * * * * * nav * * * * * * * * * * * * * */
+/* mobile */
+@media only screen and (max-width: 600px) {
+  .cBody > nav {
+    background: cornflowerblue;
+    color: #cccccc; }
+    .cBody > nav button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #eeaa11;
+      background: #eeeeee; }
+    .cBody > nav button:hover, .cBody > nav button:active {
+      color: #ffcc00;
+      background: white; }
+    .cBody > nav ul li {
+      margin-top: 20px; }
+      .cBody > nav ul li > a {
+        text-decoration: none; }
+      .cBody > nav ul li > * {
+        font-family: Consolas, Georgia, Sans-serif;
+        text-rendering: optimizelegibility;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+        display: block;
+        padding: 0 20px;
+        height: 40px;
+        line-height: 44px;
+        font-size: 19.5px;
+        white-space: nowrap;
+        color: white;
+        opacity: 0.8; }
+    .cBody > nav ul li.on > * {
+      opacity: 1; }
+    .cBody > nav ul li:hover > * {
+      opacity: 0.9; } }
+/* fullsize */
+@media only screen and (min-width: 600px) {
+  .cBody > nav {
+    background: cornflowerblue;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15); }
+    .cBody > nav button {
+      display: none; }
+    .cBody > nav ul {
+      float: right;
+      padding: 0;
+      margin: 0; }
+      .cBody > nav ul li {
+        font-family: Consolas, Georgia, Sans-serif;
+        text-rendering: optimizelegibility;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+        float: left;
+        position: relative;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 17.5px;
+        cursor: pointer; }
+        .cBody > nav ul li > a {
+          text-decoration: none; }
+        .cBody > nav ul li > * {
+          color: rgba(255, 255, 255, 0.8);
+          display: block;
+          padding: 0 13px;
+          height: 50px;
+          line-height: 50px;
+          white-space: nowrap; }
+        .cBody > nav ul li.on {
+          background: #6ea3ff; }
+          .cBody > nav ul li.on > * {
+            color: rgba(255, 255, 255, 0.9); }
+        .cBody > nav ul li:hover {
+          background: #78b2ff; }
+          .cBody > nav ul li:hover > * {
+            color: white; } }
+/* * * * * * * * * * * * * * footer * * * * * * * * * * * * * */
+blockquote {
+  padding: 20px;
+  background: white;
+  text-align: right;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px; }
+  blockquote p {
+    font-family: Consolas, Georgia, Sans-serif;
+    text-rendering: optimizelegibility;
+    text-shadow: 1px 1px 0 white;
+    font-family: Cambria, Georgia, Sans-serif;
+    font-style: italic;
+    font-size: 26px;
+    text-align: left; }
+  @media only screen and (max-width: 600px) {
+    blockquote {
+      padding: 10px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px; }
+      blockquote p {
+        font-size: 16.9px; } }
+
+li.project {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 1px #c8c8c8; }
+  li.project .img {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    @media only screen and (max-width: 600px) {
+      li.project .img {
+        border: solid 1px white;
+        height: 150px;
+        margin: 0 0 10px; } }
+    @media only screen and (min-width: 600px) {
+      li.project .img {
+        width: 400px;
+        height: 200px;
+        float: right;
+        margin: 0 0 80px 20px;
+        -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255, 255, 255, 0.3))); } }
+
+/*
+ * Swiper - Mobile Touch Slider CSS
+ * http://www.idangero.us/sliders/swiper
+ *
+ * Vladimir Kharlampidi, The iDangero.us
+ * http://www.idangero.us/
+ * 
+ * Copyright 2012, Vladimir Kharlampidi
+ * The iDangero.us
+ * http://www.idangero.us
+ *
+ * Licensed under GPL & MIT
+ *
+*/
+/* Swiper Styles */
+.swiper-container {
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  /* Fix of Webkit flickering */
+  z-index: 1; }
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 0s;
+  -webkit-transform: translate3d(0px, 0, 0);
+  -webkit-transition-timing-function: ease;
+  -moz-transition-property: -moz-transform;
+  -moz-transition-duration: 0s;
+  -moz-transform: translate3d(0px, 0, 0);
+  -moz-transition-timing-function: ease;
+  -o-transition-property: -o-transform;
+  -o-transition-duration: 0s;
+  -o-transform: translate3d(0px, 0, 0);
+  -o-transition-timing-function: ease;
+  -ms-transition-property: -ms-transform;
+  -ms-transition-duration: 0s;
+  -ms-transform: translate3d(0px, 0, 0);
+  -ms-transition-timing-function: ease;
+  transition-property: transform;
+  transition-duration: 0s;
+  transform: translate3d(0px, 0, 0);
+  transition-timing-function: ease; }
+
+.swiper-slide {
+  float: left;
+  -webkit-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+  -ms-touch-action: pan-y; }
+
+.swiper-wp8-vertical {
+  -ms-touch-action: pan-x; }
+
+/* Specify Swiper's Size: */
+.swiper-container, .swiper-slide {
+  width: 732px;
+  height: 450px; }
+
+/* custom css */
+.cSwiperView {
+  clear: both;
+  position: relative; }
+
+.cSwiperView .cDots {
+  text-align: center;
+  font-size: 35px;
+  line-height: 45px;
+  margin: 0; }
+
+.cSwiperView .cLoads {
+  font-size: 20px; }
+
+.cSwiperView .cBucketLoads {
+  font-size: 12px; }
+
+.cSwiperView .cShedLoads {
+  font-size: 8px; }
+
+.cSwiperView .cDots span {
+  opacity: 0.4; }
+
+.cSwiperView .cDots span.on {
+  opacity: 0.8; }
+
+.cSwiperView p {
+  opacity: 0.8;
+  font-size: 2em;
+  line-height: 1.5;
+  margin: 0 0 15px;
+  font-family: cambria;
+  font-style: italic;
+  text-align: justify;
+  padding: 5px 10px; }
+
+.cSwiperView q {
+  opacity: 0.5;
+  font-size: 3em;
+  line-height: 1.5;
+  margin: 0 0 15px;
+  font-family: cambria;
+  font-style: italic;
+  padding: 5px 10px; }
+
+@media only screen and (max-width: 600px), (max-device-width: 600px) {
+  .cSwiperView p {
+    font-size: 1.2em;
+    line-height: 1.2; }
+
+  .cSwiperView q {
+    font-size: 1.5em; } }
+.cSwiperView .cPlayPause,
+.cSwiperView .cPrevArrow,
+.cSwiperView .cNextArrow {
+  background: url(../img/swipercontrols.png) no-repeat;
+  position: absolute;
+  top: 10px;
+  width: 50px;
+  height: 55px;
+  cursor: pointer;
+  z-index: 99; }
+
+.cSwiperView .cPrevArrow {
+  left: 10px;
+  background-position: -150px 0; }
+
+.cSwiperView .cPlayPause {
+  left: 340px;
+  background-position: 0 0; }
+
+.cSwiperView .cPlaying {
+  background-position: -50px 0; }
+
+.cSwiperView .cNextArrow {
+  right: 10px;
+  background-position: -100px 0; }
+
+.cSwiperView .cPrevArrow:hover {
+  background-position: -150px -55px; }
+
+.cSwiperView .cPlayPause:hover {
+  background-position: 0 -55px; }
+
+.cSwiperView .cPlaying:hover {
+  background-position: -50px -55px; }
+
+.cSwiperView .cNextArrow:hover {
+  background-position: -100px -55px; }
+
+@media only screen and (min-width: 600px) {
+  img.meandvic {
+    float: right;
+    margin: 0 0 20px 20px;
+    width: 40%; } }
+.blogposts .blogpost small {
+  display: block;
+  margin-bottom: 10px; }
+
+.weather small {
+  display: block;
+  margin-bottom: 10px; }
+
+.mapWrapper {
+  height: 200px;
+  position: relative;
+  border: solid 1px #fff; }
+  .mapWrapper .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    color: black;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 3px #fff, 0px 0px 10px #fff;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    text-shadow: 0px 0px 5px #000, 0px 0px 3px #000, 0px 0px 10px #000; }
+    .mapWrapper .overlay > * {
+      margin-left: 10px;
+      margin-right: 10px; }
+      .mapWrapper .overlay > *:first-child {
+        padding-top: 10px; }
+  .mapWrapper canvas {
+    width: 100%;
+    height: 100%; }
+
+@media only screen and (min-width: 600px) {
+  .mapWrapper {
+    height: 300px; }
+    .mapWrapper .overlay > * {
+      margin-left: 20px;
+      margin-right: 20px; }
+      .mapWrapper .overlay > *:first-child {
+        padding-top: 20px; } }

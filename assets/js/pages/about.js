@@ -1,27 +1,24 @@
 function AboutPage(sTitle)
 {
-	var parent = ExtendClass(this, new PageBase(sTitle));
-	var m_sRegId = null;
+	var parent = ExtendClass(this, new PageBase(sTitle)),
+	    m_sRegId = null,
+	    m_$Frame = parent.GetFrame(),
+	    m_BlogPosts = new BlogPosts();
 	
 	this.Show = function(){
-		
-		parent.Frame.empty().append(
-			$("<h3>").html("About me..."),
-			$("<p>").html("I am currently a Senior Developer at We R Interactive, building social games for multiple platforms."),
-			$("<p>").html("Now working on the Tablet and Mobile versions of <a href=\"https://lyroke.com\">LYROKE</a> using responsive design techniques."),
-			$("<p>").html("I specialise in frontend/clientside development for web and mobile. I strive to keep up to speed of the latest technologies, currently exploring backbone.js and requirejs. Having come from a creative background I also have a keen eye for detail."),
-			$("<p>").html("Previously I was in charge of a small creative development team working on multiple projects including consumer facing white labelled systems in both mortgage comparison and corporate social networking."),
-			$("<p>").html("I am highly motivated, passionate about technology, approach challenges logically and grasp new ideas quickly."),
-			$("<p>").html("<a href=\"http://uk.linkedin.com/in/thirkettle/\">Read more...</a>")
-		);
-			
-		parent.Show();
+
+		$.get('/assets/html/about.html', function(sHtml) {
+			m_$Frame.html(sHtml);
+			parent.Show();
+			m_BlogPosts.Show(m_$Frame, function () {});
+		});
 	};
 	
 	this.Hide = function(fOnHide){
 //		EventDispatcher.UnbindEvents(m_sRegId);
+		m_BlogPosts.Hide();
 		parent.Hide(fOnHide);
-		parent.Frame.empty();
+		m_$Frame.empty();
 	};
 }
 

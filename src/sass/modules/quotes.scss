@@ -1,0 +1,25 @@
+
+blockquote {
+  padding: $paddingWidth * 2;
+  background: lighten($bgColor, 10%);
+  text-align: right;
+
+  @include border-radius($paddingWidth);
+
+  p {
+    @include headerText();
+    font-family: $fontQuotes;
+    font-style: italic;
+    font-size: $fontSize * 2;
+    text-align: left;
+  }
+
+  @media only screen and (max-width: $widthCutOff) {
+    padding: $paddingWidth;
+    @include border-radius($paddingWidth * 0.5);
+    
+    p {
+      font-size: $fontSize * 1.3;
+    }
+  }
+}
