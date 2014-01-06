@@ -3,6 +3,8 @@
         <footer>
           <?php include $_SERVER['DOCUMENT_ROOT'] . '/assets/html/contact.html'; ?>
           <p><small>Website (<?php echo $version; ?>) designed and developed by me &copy; <span id="year"></span></small></p>
+          <hr>
+          <p><small>Will Thirkettle Ltd. Registered office: Flat 4 Gate Keepers Lodge, 83 High Street. London N8 7FD. Registered in England no. 08831282</small></p>
         </footer>
       </div>
     </div>
