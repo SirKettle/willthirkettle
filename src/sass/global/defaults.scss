@@ -183,6 +183,16 @@ img.image {
         a:hover {
           color: $navBgColor;
         }
+
+        &.available {
+          background: #33FFCC;
+          color: white;
+        }
+
+        &.hired {
+          background: #a00;
+          color: white;
+        }
       }
     }
   }

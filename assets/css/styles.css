@@ -332,6 +332,12 @@ img.image {
         color: #4681ea; }
       .cBody .cPage > .cContent section a:hover {
         color: cornflowerblue; }
+      .cBody .cPage > .cContent section.available {
+        background: #33FFCC;
+        color: white; }
+      .cBody .cPage > .cContent section.hired {
+        background: #a00;
+        color: white; }
 
 /* * * * * * * * * * * * * * layout * * * * * * * * * * * * * */
 /* fullsize */
