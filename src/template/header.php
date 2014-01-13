@@ -65,3 +65,6 @@
           <button>Menu</button>
         </header>
         <div id="content" class="cContent cPage_<?php echo $displayPageTitle; ?>">
+          <noscript>
+            <p>For a better experience, please enable JavaScript in your browser. Click on the links above to navigate my site...</p>
+          </noscript>
