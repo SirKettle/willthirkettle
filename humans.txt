@@ -18,7 +18,7 @@ Live version 2.3
 
 Language: English
 
-Last update: 2013/11/26
+Last update: 2014/01/30
 
 Tech: JavaScript, lodash, jQuery, HTML5, CSS(3), Sass, Grunt, Git...
 

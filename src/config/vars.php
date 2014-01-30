@@ -12,11 +12,11 @@ $strap = "Front end developer";
 $location = "London";
 $defaultDesc = "I am a Front End Developer (aka UI Developer and JavaScript Developer) based in North London. Expert in client-side development - JavaScript, CSS and HTML";
 $description = $defaultDesc;
-$keywords = "Front End Developer, UI Developer, JavaScript Developer, HTML5, CSS3, backbone, requirejs, London";
+$keywords = "Front End Developer, UI Developer, JavaScript Developer, HTML5, CSS3, AngularJS, backbone, requirejs, London";
 $author = "Will Thirkettle - a Front End Developer (aka UI Developer and JavaScript Developer) based in North London.";
 
 // cache busting
-$version = "2.3.3";
+$version = "2.3.4";
 $cacheBusting = "?v=$version";
 
 // Social vars
