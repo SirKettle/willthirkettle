@@ -3,8 +3,8 @@
 	"fathom" : {
 		"website" : "http://fathomlondon.com",
 		"title"   : "Fathom - London",
-		"summary" : "Creating web apps and components using AngularJS",
-		"description" : "Building large-scale data-driven web applications for the financial sector. Clients ranging from tech start-ups to Tier 1 investment banks",
+		"summary" : "Building large-scale data-driven web applications for the financial sector using AngularJS",
+		"description" : "Creating web apps and components for clients ranging from tech start-ups to Tier 1 investment banks",
 		"tags" : [
 			"JavaScript", "AngularJs", "SASS", "Git", "Grunt", "HTML(5)", "CSS(3)", "Responsive-design", "REST", "Node.js"
 		]
