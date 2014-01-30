@@ -1,19 +1,14 @@
 {
-	"evolve": {
-		"title"   : "Evolve Associates Ltd",
-		"testimonial" : {
-			"html" : "<p>Will, unusually in my experience, is able to balance a highly creative, artistic and innovative flair for design; with the detail required to ensure that all the behind the scenes work is reliable, easy to navigate and doesn't 'break'. I have hired Will for two widely different business solutions and I am delighted with his work on both websites and the supporting marketing materials which he also designed for us. I would thoroughly recommend him and suggest you grab his talents quickly as he is likely to be very much in demand!</p>",
-			"author" : "Lua Leggett, Founder"
-		}
-	},
 
-	"evaluate": {
-		"title"   : "Evaluate Technologies Ltd",
-		"testimonial" : {
-			"html" : "<p>Will is an excellent Developer who never shirks from any given task. He is more than happy to go 'the extra mile' ensuring Clients requests are fulfilled prior to any deadline and was particularly helpful in getting the Confused.com's site built and live.</p>",
-			"author" : "Jim Barrowman, Director"
-		}
-	},
+	// "fathom" : {
+	// 	"website" : "http://fathomlondon.com",
+	// 	"title"   : "Fathom - London",
+	// 	"summary" : "Reusable components built with AngularJS",
+	// 	"description" : "Building AngluarJS modules for Financial SPAs",
+	// 	"tags" : [
+	// 		"javascript", "angular.js", "sass", "git", "gruntjs", "html(5)", "css(3)", "responsive-design", "rest", "node.js"
+	// 	]
+	// },
 
 	"tagcmd" : {
 		"website" : "http://tagcmd.com",
@@ -78,6 +73,22 @@
 		"testimonial" : {
 			"html" : "<p>Will has designed and developed our website <a href=\"http://norwichleap.co.uk/\">http://norwichleap.co.uk/</a>.  He is a creative and talented web designer with great communication skills. Will has continued to offer innovation and suggestions to us following the initial build. He offers a top end result at great value.</p>",
 			"author" : "Barry Allard, Project Manager"
+		}
+	},
+
+	"evolve": {
+		"title"   : "Evolve Associates Ltd",
+		"testimonial" : {
+			"html" : "<p>Will, unusually in my experience, is able to balance a highly creative, artistic and innovative flair for design; with the detail required to ensure that all the behind the scenes work is reliable, easy to navigate and doesn't 'break'. I have hired Will for two widely different business solutions and I am delighted with his work on both websites and the supporting marketing materials which he also designed for us. I would thoroughly recommend him and suggest you grab his talents quickly as he is likely to be very much in demand!</p>",
+			"author" : "Lua Leggett, Founder"
+		}
+	},
+
+	"evaluate": {
+		"title"   : "Evaluate Technologies Ltd",
+		"testimonial" : {
+			"html" : "<p>Will is an excellent Developer who never shirks from any given task. He is more than happy to go 'the extra mile' ensuring Clients requests are fulfilled prior to any deadline and was particularly helpful in getting the Confused.com's site built and live.</p>",
+			"author" : "Jim Barrowman, Director"
 		}
 	}
 }
