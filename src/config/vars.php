@@ -16,7 +16,7 @@ $keywords = "Front End Developer, UI Developer, JavaScript Developer, HTML5, CSS
 $author = "Will Thirkettle - a Front End Developer (aka UI Developer and JavaScript Developer) based in North London.";
 
 // cache busting
-$version = "2.3.5";
+$version = "2.4.0";
 $cacheBusting = "?v=$version";
 
 // Social vars
