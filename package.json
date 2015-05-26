@@ -1,6 +1,6 @@
 {
   "name": "wt_portfolio",
-  "version": "0.1.0",
+  "version": "2.5.0",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-less": "~0.7.0",
