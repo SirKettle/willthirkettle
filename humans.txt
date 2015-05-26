@@ -14,7 +14,7 @@ Will Thirkettle - Web design and development
 
 /* SITE */
 
-Live version 2.4
+Live version 2.5
 
 Language: English
 
